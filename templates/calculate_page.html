@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/main5.css">
+</head>
+<body>
+<h2>The calorie calculator</h2>
+<p>Fill in the form</p>
+<form action="calorie_page" method = "post">
+    {{calorie_form.weight.label}} {{calorie_form.weight}}
+    <br>
+    {{calorie_form.height.label}} {{calorie_form.height}}
+    <br>
+    {{calorie_form.age.label}} {{calorie_form.age}}
+    <hr>
+    {{calorie_form.country.label}} {{calorie_form.country}}
+    <br>
+    {{calorie_form.city.label}} {{calorie_form.city}}
+    <br>
+    {{calorie_form.button}}
+    {% if result %}
+    <br>
+    <p>Amount of calories that you need to consume daily is: </p> {{num_calories}}
+    {% endif %}
+</form>
+</body>
+</html>
